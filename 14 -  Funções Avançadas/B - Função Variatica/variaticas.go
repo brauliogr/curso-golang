@@ -13,8 +13,15 @@ func soma(numeros ...int) int {
 
 }
 
+func escrever(texto string, numeros ...int) {
+	for _, numero := range numeros {
+		fmt.Println(texto, numero)
+	}
+}
+
 func main() {
-	totaldasoma := soma(1, 2, 3, 4, 5, 200, 102, 12, 13)
+	totaldasoma := soma(1, 2, 3, 3)
 	fmt.Println(totaldasoma)
 
+	escrever("Olá mundo", 10, 2, 3, 4, 5, 6, 7)
 }
